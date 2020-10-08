@@ -1,0 +1,10 @@
+<div id="tweet-container-{{ .Get 0 }}"></div>
+<script type="text/javascript" src="https://platform.twitter.com/widgets.js"></script>
+<script>
+  twttr.widgets.createTweet(
+    '{{ .Get 0 }}',
+    document.getElementById('tweet-container-{{ .Get 0 }}'),
+  );
+</script>
+<script src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote><p>If nothing is displayed above this, "Tweet ID:{{ .Get 0 }}" has been deleted.</p></blockquote>
